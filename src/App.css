@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  border: 10px black solid;
+  
+}
+
+.boxdiv{
+  height: 50%;
+  width: 50%;
+  border: 5px rgb(103, 138, 88) solid;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+.buttondiv{
+  height: 20%;
+  width: 100%;
+  border: 10px black solid;
+}
+.divBlue{
+  height: 100px;
+  width: 100px;
+  margin-top: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 10px rgb(77, 100, 173) solid;
+
+}
+.divyellow{
+  height: 100px;
+  width: 100px;
+  margin-top: 10%;
+
+  border: 10px rgb(180, 182, 81) solid;
+}
+.divred{
+  height: 100px;
+  width: 100px;
+  margin-top: 10%;
+  border: 10px rgb(177, 52, 52) solid ;
+}
