@@ -8,6 +8,7 @@ import Switch from '@material-ui/core/Switch'
 import { useHistory } from 'react-router'; 
 import { blue,yellow } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
+//import Buttonswitch from './buttonswitch';
 
 
 
@@ -46,11 +47,13 @@ const useStyles = makeStyles({
 function App() {
   const history = useHistory()
   const [click,setClick] =useState(false)
+  
   const [clickblue,setClickblue] =useState(false)
   const [clickyellow,setClickyellow] =useState(false)
 
   const dispatch = useDispatch()
   const colors = useSelector(state=>state.colors)
+
 
 
 
@@ -79,6 +82,8 @@ const classes = useStyles()
     <div className="App">
        
          <div className="buttondiv">
+
+           {/* <Buttonswitch clicks={clicks} changeColors={changeColors}/> */}
 
             <Switch
             onChange={changeColor}

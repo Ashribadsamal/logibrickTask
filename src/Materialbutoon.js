@@ -11,7 +11,21 @@ import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import  Checkbox  from '@material-ui/core/Checkbox'
 import { useHistory } from 'react-router'
+import Switch from "react-switch"
 
+
+
+const textSwitch={
+  
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    fontSize: 15,
+    color: "orange",
+    paddingRight: 2
+
+}
 
 const useStyles = makeStyles({
     root:{
@@ -41,7 +55,7 @@ const usestyled = makeStyles({
 
 function ContainerStyle(){
     const history = useHistory()
-    
+    const [clicks,setClicks] =useState(false)
     const changeRoute=()=>{
         history.push("/switch")
     }
@@ -77,6 +91,19 @@ function ContainerStyle(){
                     Customize Button with makeStyles-:
                 </Typography>
                 <ButtonStyled/>
+                <br/>
+                 Switch 
+                <Switch
+                classes="react-switch"
+                onChange={()=>setClicks(!clicks)}
+            checked={clicks}
+            size="medium"
+            checkedIcon={
+              <div style={textSwitch}>Yes</div>
+            }
+            uncheckedIcon={
+              <div style={textSwitch}>No</div>
+            }/> 
 
 
                 <Typography variant="h4">
